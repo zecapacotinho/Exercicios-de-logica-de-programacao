@@ -8,7 +8,7 @@ function TabuleiroXadrezNumerico(tamanho){
             } else{
                 numero = 0
             }
-            linha += numero
+            linha += ` ${numero}` 
        }
         console.log(linha)
     }
