@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresa XYZ LTDA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Empresa XYZ LTDA</h1>
+    </header>
+    <main>
+        <div class="cont">
+            <label for="num">
+                <p>Salário Atual em R$</p>
+            </label>
+            <input type="number" name="num" id="num">
+        </div>
+
+        <div class="cont">
+            <label for="per">
+                <p>Percentual de Reajuste</p>
+            </label>
+            <input type="number" name="per" id="per">
+        </div>
+
+        <div class="cont">
+            <input id="but" type="button" value="Reajuste" onclick="PercentualReajuste()">
+        </div>
+        <p id="res"></p>
+    </main>
+    <footer>
+        <p>Apoli-Code</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
