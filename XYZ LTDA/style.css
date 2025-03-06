@@ -51,10 +51,9 @@ main{
 }
 
 #res{
+    margin-top: 1.4rem;
     text-align: justify;
-    margin-top: 1rem;
-    text-align: center;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 footer{
