@@ -19,5 +19,6 @@ function FizzBuzz() {
             res.innerHTML = `${n} não multiplo de 3 ou 5`
 
         }
+        window.document.getElementById('num').value = ''
     }
 }
