@@ -17,7 +17,7 @@ function ContadorIndividual(texto){
     for(let vogal in contador){
         resultado += `${vogal}: ${contador[vogal]}\n`
     }
-    
+
     return resultado
 }
-console.log(ContadorIndividual('seios'))
+console.log(ContadorIndividual('raba'))
