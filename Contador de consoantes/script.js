@@ -12,4 +12,4 @@ function ContadorCosoante(texto){
         ? 'Não contém nenhuma consoante...'
         : `No total tem ${leitor} consoantes.`
 }
-console.log(ContadorCosoante('rosa'))
+console.log(ContadorCosoante('raba'))
