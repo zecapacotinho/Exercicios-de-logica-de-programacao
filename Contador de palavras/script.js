@@ -1,5 +1,5 @@
 function ContadorPalavra(texto){
     let palavras = texto.trim().split(' ').filter(p => p !== '')
-    return `No total "${texto}" tem ${palavras.length}`
+    return `A frase "${texto}", tem no total ${palavras.length} palavras`
 }
 console.log(ContadorPalavra('eu gosto de sorvete'))
