@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Validador de CPF</title>
+    <title>Verificador de CPF</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Validador de CPF</h1>
-    <p>Coloque o seu CPF e veja se ele é válido.</p>
+    <h1>Verificador de CPF</h1>
     <div class="cont">
         <label for="num">
-            <p>CPF:</p>
+            <p>Veja se o seu CPF é válido:</p>    
         </label>
-        <input type="number" name="num" id="num" placeholder="000.000.000-00" maxlength="11">
+        <input type="text" name="num" id="num" maxlength="14" placeholder="XXX.XXX.XXX-YY">
     </div>
-    <input type="button" value="Verificar" onclick="ValidadorCPF()">
+    <input type="button" value="Verificar" onclick="VerificadorCPF()">
     <div id="res"></div>
     <script src="script.js"></script>
 </body>
