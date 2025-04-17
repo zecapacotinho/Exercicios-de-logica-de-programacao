@@ -13,7 +13,7 @@ num.addEventListener('keypress', () => {
 })
 
 function VerificadorCPF(){
-    const res = window.document.querySelector('#res')
+    const res = window.document.querySelector('#result')
     
     if(!num.value.trim()){
         window.alert('Por favor, insira um CPF para que o programa seja execultado.')

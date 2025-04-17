@@ -3,19 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verificador de CPF</title>
+    <title>Válidador de CPF</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Verificador de CPF</h1>
-    <div class="cont">
+    <header>
+       <h1>Válidador de CPF</h1> 
+    </header>
+    <main>
+        <section>
+            <div class="cont">
         <label for="num">
             <p>Veja se o seu CPF é válido:</p>    
         </label>
         <input type="text" name="num" id="num" maxlength="14" placeholder="XXX.XXX.XXX-YY">
     </div>
-    <input type="button" value="Verificar" onclick="VerificadorCPF()">
-    <div id="res"></div>
+    <input id="but" type="button" value="Verificar" onclick="VerificadorCPF()">
+    <div id="res">
+        <p id="result"></p>
+    </div>
+        </section>
+    </main>
+    
     <script src="script.js"></script>
 </body>
 </html>
