@@ -13,7 +13,7 @@ function ClickButton(){
             let codigo = valor.charCodeAt(0)
 
             if(codigo >= 97 && codigo <= 122){
-               let numero = (codigo - 97 + 2) % 26 + 97
+               let numero = (codigo - 97 + 2) % 26 
                res.innerHTML += `${String.fromCharCode(numero + 96)}`
                res.innerHTML += ''
             }
