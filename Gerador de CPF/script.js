@@ -1,5 +1,6 @@
+const res = window.document.querySelector('#res')
 function ClickButton(){
-    const res = window.document.querySelector('#res')
+    
     let valores = []
     let soma1 = 0
     let soma2 = 0
@@ -30,3 +31,5 @@ function ClickButton(){
     let CPFormatado = `${cpf.slice(0,3)}.${cpf.slice(3,6)}.${cpf.slice(6,9)}-${cpf.slice(9)}`
     res.innerHTML += `${CPFormatado}<br>`
 }
+
+
