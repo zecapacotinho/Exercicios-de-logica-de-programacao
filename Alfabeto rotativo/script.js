@@ -13,9 +13,14 @@ function ClickButton(){
             let codigo = valor.charCodeAt(0)
 
             if(codigo >= 97 && codigo <= 122){
-               let numero = (codigo - 97 + 2) % 26 
-               res.innerHTML += `${String.fromCharCode(numero + 96)}`
+               let novoCodigo = (codigo - 97 + 2) % 26 
+               res.innerHTML += `${String.fromCharCode(novoCodigo + 96)}`
                res.innerHTML += ''
+            }
+            else if(codigo >= 65 && codigo <= 90){
+                let novoCodigo = (codigo - 65 + 2) % 26
+                res.innerHTML += `${String.fromCharCode(novoCodigo + 64)}`
+                res.innerHTML += '' 
             }
             else{
                 res.innerHTML = letra
