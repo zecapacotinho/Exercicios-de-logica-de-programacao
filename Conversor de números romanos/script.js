@@ -29,6 +29,6 @@ function Conversor(){
             }
             previous = value
         }
-        res.innerHTML += `<strong>Resultado:</strong> ${total}`
+        res.innerHTML = `<strong>Resultado:</strong> ${total}`
     }
 }
