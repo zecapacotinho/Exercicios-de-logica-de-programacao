@@ -1,16 +1,16 @@
-function segundoMaiorValor(valores){
-    let maiorValor = Infinity
-    let segundoMaior = -Infinity
+function segundoMaiorValor(arr){
+    let maiorValor = -Infinity
+    let segundoMaiorValor = -Infinity
 
-    for(let num of valores){
+    for(let num of arr){
         if(num > maiorValor){
-            segundoMaior = maiorValor
+            segundoMaiorValor = maiorValor
             maiorValor = num
         }
-        else if(num > segundoMaior && num < maiorValor){
-            segundoMaior = num
+        else if(num > segundoMaiorValor && num < maiorValor){
+            segundoMaiorValor = num
         }
     }
-    return segundoMaior
+    return segundoMaiorValor
 }
-console.log(segundoMaiorValor([10,20,30,40]))
+console.log(segundoMaiorValor([1,2,3,4,5]))
