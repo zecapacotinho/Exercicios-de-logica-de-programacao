@@ -6,10 +6,9 @@ async function multiplasAPis(){
             axios.get('https://jsonplaceholder.typicode.com/users'),
             axios.get('https://jsonplaceholder.typicode.com/posts')
         ])
-        const filterPost = infPost.filter(post => post.userId === id)
         const filterInformationUser = infUser.map(item => ({
             name: item.name,
-            post: filterPost
+            post: infPost.filter(post => post.userId === item.id).length
         }))
         console.log(filterInformationUser)
     }

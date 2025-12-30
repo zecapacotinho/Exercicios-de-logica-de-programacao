@@ -1,13 +1,10 @@
-function ListaRange(){
-    let start = 1
-    let end = 10
-    
+function ListaRange(start, end){
     for(let i = start; i < end; i++){
         if(i % 2 === 0){
             console.log(i)
         }
     }
 }
-ListaRange()
+console.log(ListaRange(1, 10))
 
 
