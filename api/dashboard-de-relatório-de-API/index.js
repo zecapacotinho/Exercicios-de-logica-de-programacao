@@ -22,27 +22,47 @@ async function getAPIS(){
  async function InformacoesTotal(){
     const data = await getAPIS()
     if(!data) return;
+    console.log('---------------------------------------------------------------')
+    console.log('                   RELATÓRIO GERAL')
+    console.log('---------------------------------------------------------------')
     console.log(`Total de usuários: ${data.user.length}`)
     console.log(`Total de posts: ${data.posts.length}`)
     console.log(`Total de comentários: ${data.comments.length}`)
+    console.log('---------------------------------------------------------------')
 }
-//InformacoesTotal()
+InformacoesTotal()
 
 async function relatorioUser(){
     const data = await getAPIS()
     if(!data) return;
+    console.log('               RELATÓRIO POR USUÁRIO')
+    console.log('---------------------------------------------------------------')
     const informacoesUser = data.user.map(item => ({
         name: item.name,
         posts: data.posts.filter(post => post.userId === item.id).length,
         comments: data.comments.filter(comments => comments.postId === item.id).length
     }))
     console.log(informacoesUser)
+    console.log('---------------------------------------------------------------')
 }
-//relatorioUser()
+relatorioUser()
 
 async function topUsers(){
     const data = await getAPIS()
     if(!data) return;
-    
+    console.log('               TOP 3 USUÁRIOS MAIS ATIVOS')
+    console.log('---------------------------------------------------------------')
+    const mapUsers = data.user.map(item => ({
+        name: item.name,
+        posts: data.posts.filter(posts => posts.userId === item.id).length,
+        comments: data.comments.filter(comments => comments.postId === item.id).length
+    }))
+    const rankingUsers = mapUsers.reduce((acc, user) => {
+        acc.push(user)
+        acc.sort((a, b) => (b.posts + b.comments) - (a.posts + a.comments))
+        return acc.slice(0,3)
+    }, [])
+    console.log(rankingUsers)
+    console.log('---------------------------------------------------------------')
 }
 topUsers()
