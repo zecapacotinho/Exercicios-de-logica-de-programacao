@@ -15,7 +15,7 @@ async function getAPIS(){
         }
     }
     catch(err){
-        console.log('Houve um erro ao acessar a API...', err.response?.status)
+        console.log('Houve um erro ao acessar à API...', err.response?.status)
     }
 }
  
@@ -40,7 +40,11 @@ async function relatorioUser(){
     const informacoesUser = data.user.map(item => ({
         name: item.name,
         posts: data.posts.filter(post => post.userId === item.id).length,
-        comments: data.comments.filter(comments => comments.postId === item.id).length
+        comments: data.comments.filter(comment =>
+            data.posts.some(
+                post => post.userId === item.id && post.id === comment.postId
+            )
+        ).length
     }))
     console.log(informacoesUser)
     console.log('---------------------------------------------------------------')
@@ -55,7 +59,11 @@ async function topUsers(){
     const mapUsers = data.user.map(item => ({
         name: item.name,
         posts: data.posts.filter(posts => posts.userId === item.id).length,
-        comments: data.comments.filter(comments => comments.postId === item.id).length
+        comments: data.comments.filter(comment =>
+            data.posts.some(
+                post => post.userId === item.id && post.id === comment.postId
+            )
+        ).length
     }))
     const rankingUsers = mapUsers.reduce((acc, user) => {
         acc.push(user)
